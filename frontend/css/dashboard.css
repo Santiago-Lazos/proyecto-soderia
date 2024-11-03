@@ -1,0 +1,178 @@
+/* Código existente */
+
+/* General Styles */
+body {
+    font-family: sans-serif;
+    background-color: #ddd;
+    color: #333;
+    margin: 0;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    min-height: 40px;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.1); 
+    color: #333;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo-img {
+    max-width: 100px;
+    height: auto;
+}
+
+.header__nav {
+    display: flex;
+}
+
+.header__nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header__nav-item {
+    margin-left: 20px;
+}
+
+.header__nav-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.header__nav-link:hover {
+    color: #37B9E6;
+    text-decoration: underline;
+}
+
+/* Main Styles */
+.main {
+    padding: 20px;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+}
+
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard__title {
+    color: #142B83;
+    margin-bottom: 20px;
+}
+
+.dashboard__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.dashboard__section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard__section-title {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-bottom: 2px solid #142B83;
+    padding-bottom: 5px;
+}
+
+.dashboard__link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dashboard__link:hover {
+    box-shadow: 0 8px 16px #00000555; /* Sombra más intensa y grande para un efecto más notorio */
+}
+
+/* Código nuevo para diseño responsive */
+
+/* Pantallas pequeñas (hasta 600px de ancho) */
+@media only screen and (max-width: 600px) {
+
+    .header {
+        flex-direction: column;
+    }
+
+    .header__nav-list {
+        display: block;
+    }
+
+    .header__logo-img {
+        text-align: center;
+    }
+
+    .header__nav-link {
+        display: block;
+    }
+
+    .header__nav-item {
+        margin-top: 10px;
+    }
+
+    .dashboard__content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .dashboard__section-title {
+        font-size: 16px;
+    }
+
+    .dashboard__section {
+        padding: 15px;
+    }
+}
+
+/* Pantallas medianas (601px a 1024px de ancho) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+    .header {
+        flex-direction: column;
+    }
+
+    .header__nav-list {
+        display: block;
+    }
+      
+    .header__nav-item {
+        margin: 10px;
+    }
+
+
+    .dashboard__content {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .dashboard__section-title {
+        font-size: 17px;
+    }
+
+    .dashboard__section {
+        padding: 18px;
+    }
+}

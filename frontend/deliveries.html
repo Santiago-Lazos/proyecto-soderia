@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/deliveries.css">
+    <title>Entregas - FlowMaster</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="img/Logo_FlowMaster-removebg-preview.png" alt="Logo del software" class="header__logo-img">
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="dashboard.html" class="header__nav-link">Panel de control</a></li>
+                <li class="header__nav-item"><a href="profile.html" class="header__nav-link">Perfil</a></li>
+                <li class="header__nav-item"><a href="settings.html" class="header__nav-link">Configuración</a></li>
+                <li class="header__nav-item"><a href="logout.html" class="header__nav-link">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Formulario para añadir una nueva entrega -->
+        <section class="add-delivery-form">
+            <h2>Añadir Nueva Entrega</h2>
+            <form action="#" method="post">
+                <label for="client">Cliente:</label>
+                <select id="client" name="client">
+                    <option value="cliente1">Juan Pérez</option>
+                    <option value="cliente2">María López</option>
+                    <!-- Más opciones de clientes -->
+                </select>
+
+                <label for="product">Producto:</label>
+                <select id="product" name="product">
+                    <option value="agua500ml">Agua 500ml</option>
+                    <option value="agua1l">Agua 1L</option>
+                    <option value="agua5l">Agua 5L</option>
+                    <!-- Más opciones de productos -->
+                </select>
+
+                <label for="quantity">Cantidad:</label>
+                <input type="number" id="quantity" name="quantity" min="1">
+
+                <label for="delivery-date">Fecha de Entrega:</label>
+                <input type="date" id="delivery-date" name="delivery-date">
+
+                <label for="status">Estado:</label>
+                <select id="status" name="status">
+                    <option value="en-proceso">En Proceso</option>
+                    <option value="entregado">Entregado</option>
+                    <option value="retrasado">Retrasado</option>
+                </select>
+
+                <button type="submit">Añadir Entrega</button>
+            </form>
+        </section>
+
+        <!-- Lista de entregas -->
+        <section class="delivery-list">
+            <h2>Lista de Entregas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Fecha de Entrega</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Juan Pérez</td>
+                        <td>Agua 5L</td>
+                        <td>3</td>
+                        <td>2024-08-18</td>
+                        <td>En Proceso</td>
+                        <td>
+                            <a href="#">Editar</a> |
+                            <a href="#">Eliminar</a>
+                        </td>
+                    </tr>
+                    <!-- Repite para otras entregas -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

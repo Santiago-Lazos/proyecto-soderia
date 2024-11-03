@@ -1,0 +1,79 @@
+/* General Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Main Content Styles */
+.main {
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.logout {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.logout__title {
+    color: #142B83;
+    margin-bottom: 20px;
+}
+
+.logout__message {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.logout__link {
+    display: inline-block;
+    background-color: #37B9E6;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.logout__link:hover {
+    background-color: #2a90b9;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .logout__title {
+        font-size: 24px;
+    }
+
+    .logout__message {
+        font-size: 16px;
+    }
+
+    .logout__link {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logout__title {
+        font-size: 20px;
+    }
+
+    .logout__message {
+        font-size: 14px;
+    }
+
+    .logout__link {
+        padding: 15px 30px;
+        font-size: 14px;
+    }
+}

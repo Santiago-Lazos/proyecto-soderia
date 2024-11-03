@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/setting.css">
+    <title>Settings - FlowMaster</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="img/Logo_FlowMaster-removebg-preview.png" alt="Logo del software" class="header__logo-img">
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="dashboard.html" class="header__nav-link">Panel de control</a></li>
+                <li class="header__nav-item"><a href="profile.html" class="header__nav-link">Perfil</a></li>
+                <li class="header__nav-item"><a href="settings.html" class="header__nav-link">Configuración</a></li>
+                <li class="header__nav-item"><a href="logout.html" class="header__nav-link">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="settings">
+            <h1 class="settings__title">Configuración</h1>
+            <div class="settings__content">
+                <div class="settings__section">
+                    <h2 class="settings__section-title">Configuración de privacidad</h2>
+                    <form class="settings__form">
+                        <div class="settings__form-group">
+                            <label for="show-email" class="settings__label">Mostrar Email</label>
+                            <input type="checkbox" id="show-email" class="settings__checkbox">
+                        </div>
+                        <div class="settings__form-group">
+                            <label for="show-profile" class="settings__label">Perfil público</label>
+                            <input type="checkbox" id="show-profile" class="settings__checkbox">
+                        </div>
+                    </form>
+                </div>
+                <div class="settings__section">
+                    <h2 class="settings__section-title">Configuración de notificaciones</h2>
+                    <form class="settings__form">
+                        <div class="settings__form-group">
+                            <label for="email-notifications" class="settings__label">Notificaciones de Email</label>
+                            <input type="checkbox" id="email-notifications" class="settings__checkbox" checked>
+                        </div>
+                        <div class="settings__form-group">
+                            <label for="sms-notifications" class="settings__label">Notificaciones SMS</label>
+                            <input type="checkbox" id="sms-notifications" class="settings__checkbox">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <button type="submit" class="settings__button">Guardar cambios</button>
+
+        </section>
+    </main>
+</body>
+</html>

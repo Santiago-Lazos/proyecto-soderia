@@ -1,0 +1,246 @@
+/* General Styles */
+body {
+    font-family: sans-serif;
+    background-color: #ddd;
+    color: #333;
+    margin: 0;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    min-height: 40px;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.1); 
+    color: #333;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo-img {
+    max-width: 100px;
+    height: auto;
+}
+
+.header__nav {
+    display: flex;
+}
+
+.header__nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header__nav-item {
+    margin-left: 20px;
+}
+
+.header__nav-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.header__nav-link:hover {
+    color: #37B9E6;
+    text-decoration: underline;
+}
+
+/* Formulario de añadir pedido */
+.add-order-form {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: #ddd;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-order-form h2 {
+    color: #142B83;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.add-order-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-order-form label {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 600;
+}
+
+.add-order-form input,
+.add-order-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.add-order-form button {
+    width: 150px;
+    height: 40px;
+    background-color: #142B83;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    align-self: center;
+}
+
+.add-order-form button:hover {
+    background-color: #0d1f5c;
+}
+
+/* Lista de pedidos */
+.order-list {
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-list h2 {
+    color: #142B83;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.order-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-list th, .order-list td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.order-list th {
+    background-color: #142B83;
+    color: white;
+    font-weight: 600;
+}
+
+.order-list td {
+    color: #333;
+}
+
+.order-list td a {
+    color: #37B9E6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.order-list td a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    
+    .header {
+        flex-direction: column;
+    }
+
+    .header__nav-list {
+        display: block;
+    }
+
+    .header__logo-img {
+        text-align: center;
+    }
+
+    .header__nav-link {
+        display: block;
+    }
+
+    .header__nav-item {
+        margin-top: 10px;
+    }
+
+    .add-order-form {
+        padding: 20px;
+    }
+
+    .add-order-form button {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .order-list {
+        padding: 15px;
+    }
+
+    .order-list table {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .header {
+        flex-direction: column;
+    }
+
+    .header__nav-list {
+        display: block;
+    }
+
+    .header__logo-img {
+        text-align: center;
+    }
+
+    .header__nav-link {
+        display: block;
+    }
+
+    .header__nav-item {
+        margin-top: 10px;
+    }
+    
+    .add-order-form {
+        padding: 15px;
+        margin: 0 10px;
+    }
+
+    .add-order-form button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .order-list {
+        padding: 10px;
+        margin: 0 5px;
+    }
+
+    .order-list table {
+        font-size: 12px;
+    }
+
+    .order-list th, .order-list td {
+        padding: 8px;
+    }
+}

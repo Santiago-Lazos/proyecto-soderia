@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/orders.css">
+    <title>Pedidos - FlowMaster</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="img/Logo_FlowMaster-removebg-preview.png" alt="Logo del software" class="header__logo-img">
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="dashboard.html" class="header__nav-link">Panel de control</a></li>
+                <li class="header__nav-item"><a href="profile.html" class="header__nav-link">Perfil</a></li>
+                <li class="header__nav-item"><a href="settings.html" class="header__nav-link">Configuración</a></li>
+                <li class="header__nav-item"><a href="logout.html" class="header__nav-link">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="add-order-form">
+            <h2>Añadir Nuevo Pedido</h2>
+            <form id="orderForm">
+                <label for="client">Cliente</label>
+                <select id="client" name="client" required>
+                    <option value="">Selecciona un cliente</option>
+                </select>
+
+                <label for="product">Producto</label>
+                <select id="product" name="product" required>
+                    <option value="">Selecciona un producto</option>
+                </select>
+
+                <label for="amount">Cantidad</label>
+                <input type="number" id="amount" name="amount" required>
+
+                <label for="deliveryDate">Fecha de Entrega</label>
+                <input type="date" id="deliveryDate" name="deliveryDate" required>
+
+                <label for="paymentMethod">Método de Pago</label>
+                <select id="paymentMethod" name="paymentMethod" required>
+                    <option value="">Selecciona un método</option>
+                    <option value="efectivo">Efectivo</option>
+                    <option value="tarjeta">Tarjeta de Crédito</option>
+                    <option value="transferencia">Transferencia Bancaria</option>
+                </select>
+
+                <label for="orderStatus">Estado del Pedido</label>
+                <select id="orderStatus" name="orderStatus" required>
+                    <option value="">Selecciona un estado</option>
+                    <option value="pendiente">Pendiente</option>
+                    <option value="en-preparacion">En Preparación</option>
+                    <option value="entregado">Entregado</option>
+                    <option value="cancelado">Cancelado</option>
+                </select>
+
+                <button type="submit" id="botonFormulario">Añadir Pedido</button>
+
+            </form>
+        </section>
+
+        <!-- Lista de pedidos -->
+        <section class="order-list">
+            <h2>Lista de Pedidos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Fecha de Entrega</th>
+                        <th>Pago</th>
+                        <th>Estado</th>
+                        <th>Total</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="orderList">
+                    <!-- Repite para otros pedidos -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Enlace al archivo externo de JavaScript -->
+    <script src="js/orders.js"></script>
+</body>
+</html>

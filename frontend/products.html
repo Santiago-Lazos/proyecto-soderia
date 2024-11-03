@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/products.css">
+    <title>Productos - FlowMaster</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="img/Logo_FlowMaster-removebg-preview.png" alt="Logo del software" class="header__logo-img">
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="dashboard.html" class="header__nav-link">Panel de control</a></li>
+                <li class="header__nav-item"><a href="profile.html" class="header__nav-link">Perfil</a></li>
+                <li class="header__nav-item"><a href="settings.html" class="header__nav-link">Configuración</a></li>
+                <li class="header__nav-item"><a href="logout.html" class="header__nav-link">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="add-product-form">
+            <h2>Añadir Nuevo Producto</h2>
+            <form id="productForm">
+                
+                <label for="productName">Nombre del Producto</label>
+                <input type="text" id="productName" name="productName" required>
+
+                <label for="productPrice">Precio</label>
+                <input type="number" id="productPrice" name="productPrice" min="0" step="0.01" required>
+
+                <label for="productStock">Stock</label>
+                <input type="number" id="productStock" name="productStock" min="0" required>
+
+                <button type="submit" id="botonFormulario">Añadir Producto</button>
+                
+            </form>
+        </section>
+
+        <!-- Lista de productos -->
+        <section class="product-list">
+            <h2>Lista de Productos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="productList">
+                    <!-- Repite para otros productos -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Enlace al archivo externo de JavaScript -->
+    <script src="js/products.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    font-family: sans-serif;
+    background-color: #ddd;
+    color: #333;
+    margin: 0;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    min-height: 40px;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.1); 
+    color: #333;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo-img {
+    max-width: 100px;
+    height: auto;
+}
+
+.header__nav {
+    display: flex;
+}
+
+.header__nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header__nav-item {
+    margin-left: 20px;
+}
+
+.header__nav-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.header__nav-link:hover {
+    color: #37B9E6;
+    text-decoration: underline;
+}
+
+/* Zones Map Styles */
+.zones-map {
+    max-width: 80%;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.zones-map h2 {
+    color: #142B83;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-image {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    
+    .header {
+        flex-direction: column;
+    }
+
+    .header__nav-list {
+        display: block;
+    }
+
+    .header__logo-img {
+        text-align: center;
+    }
+
+    .header__nav-link {
+        display: block;
+    }
+
+    .header__nav-item {
+        margin-top: 10px;
+    }
+
+    .zones-map {
+        padding: 50px;
+    }
+
+    .map-image {
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    
+    .header {
+        flex-direction: column;
+    }
+
+    .header__nav-list {
+        display: block;
+    }
+
+    .header__logo-img {
+        text-align: center;
+    }
+
+    .header__nav-link {
+        display: block;
+    }
+
+    .header__nav-item {
+        margin-top: 10px;
+    }
+    
+    .zones-map {
+        padding: 50px;
+    }
+
+    .map-image {
+        max-width: 100%;
+        height: auto;
+    }
+}

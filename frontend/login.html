@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <title>FlowMaster - Login</title>
+</head>
+<body>
+    <main class="login">
+        <section class="login__container">
+            <div class="login__logo">
+                <img src="img/Logo_FlowMaster-removebg-preview.png" alt="Logo del software">
+            </div>
+            <h1 class="login__title">FlowMaster</h1>
+            <form class="login__form" id="loginForm">
+                <div class="login__form-group">
+                    <label class="login__label" for="username">Usuario</label>
+                    <input class="login__input" 
+                           type="text" 
+                           id="username" 
+                           name="username"  
+                           autocomplete="username" 
+                           aria-label="Usuario">
+                </div>
+                <div class="login__form-group">
+                    <label class="login__label" for="password">Contraseña</label>
+                    <input class="login__input" 
+                           type="password" 
+                           id="password" 
+                           name="password"  
+                           autocomplete="current-password" 
+                           aria-label="Contraseña">
+                </div>
+                <button class="login__button" type="submit" id="loginButton">Iniciar Sesión</button>
+            </form>
+        </section>
+    </main>
+    <script src="js/login.js"></script>
+</body>
+</html>
